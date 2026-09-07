@@ -1,6 +1,6 @@
-# Real-Time License Plate Recognition (LPR) System
+# Real-Time License Plate Recognition
 
-detect, read, and stabilize car license plates in real time using  videos
+detect car license plates in real time using videos
 
 ## Dataset & Model
 
@@ -29,3 +29,6 @@ detect, read, and stabilize car license plates in real time using  videos
 2. upload a video containing cars with number plates and click on process!
 
 ## Demo
+
+https://github.com/user-attachments/assets/1aa5c766-dcca-4cbb-89b4-719e2fb8bd8a
+
