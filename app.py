@@ -24,10 +24,10 @@ if uploaded_file is not None:
     with st.spinner("Processing frames... Please wait."):
       cap = cv2.VideoCapture(input_path)
       # use a temporary file for output to prevent browser/Streamlit caching
-      out_tfile = tempfile.NamedTemporaryFile(delete=False, suffix=".mp4")
+      out_tfile = tempfile.NamedTemporaryFile(delete=False, suffix=".webm")
       output_path = out_tfile.name
 
-      fourcc = cv2.VideoWriter_fourcc(*"avc1")
+      fourcc = cv2.VideoWriter_fourcc(*"VP80")
 
       fps = cap.get(cv2.CAP_PROP_FPS) or 30
       width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
