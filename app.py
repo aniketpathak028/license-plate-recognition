@@ -23,7 +23,9 @@ if uploaded_file is not None:
   if st.button("Process Video"):
     with st.spinner("Processing frames... Please wait."):
       cap = cv2.VideoCapture(input_path)
-      output_path = "output_processed.mp4"
+      # use a temporary file for output to prevent browser/Streamlit caching
+      out_tfile = tempfile.NamedTemporaryFile(delete=False, suffix=".mp4")
+      output_path = out_tfile.name
 
       fourcc = cv2.VideoWriter_fourcc(*"avc1")
 
